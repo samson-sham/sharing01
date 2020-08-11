@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <style>
+            #earth_div{top: 0; right: 0; bottom: 0; left: 0; position: absolute !important;}
+        </style>
+        <script src="http://www.webglearth.com/v2/api.js"></script>
+    </head>
+    <body>
+        <div id="earth_div"></div>
+        <script>
+            const TOKYO = [35.68612532278542, 139.77724129576663];
+            const TOKYO_BOUNDS = [20.73998334686695, 43.891096451428986, 110.86859303204889, 168.68588955288402];
+            const HK = [22.36688683237283, 114.18738066947036];
+            const HK_BOUNDS = [22.199740780556855, 22.533380179964833, 113.85217773257924, 114.5225836064205];
+            const earth = new WE.map('earth_div');
+            earth.setView(TOKYO, 11);
+
+            const map = WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(earth);
+
+            const _resolvers = [];
+            function whenAnimationEnds(resolve) {
+                _resolvers.push(resolve);
+            }
+            function injectAnimatorOnEnd(func) {
+                const __onEnd = earth.camera.aa.Kb;
+                earth.camera.aa.Kb = function() {
+                    for (let resolve; resolve = _resolvers.shift();) {
+                        resolve();
+                    }
+                    __onEnd.call(earth.camera.aa);
+                };
+            }
+            injectAnimatorOnEnd();
+
+            function zoomOut() {
+                return new Promise(resolve => {
+                    whenAnimationEnds(resolve);
+                    earth.panInsideBounds(TOKYO_BOUNDS);
+                });
+            }
+            function translate() {
+                return new Promise(resolve => {
+                    whenAnimationEnds(resolve);
+                    earth.panTo(HK);
+                });
+            }
+            function zoomIn() {
+                return new Promise(resolve => {
+                    whenAnimationEnds(resolve);
+                    earth.panInsideBounds(HK_BOUNDS);
+                });
+            }
+        </script>
+    </body>
+</html>

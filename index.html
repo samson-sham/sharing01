@@ -1,0 +1,251 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>シェアリング</title>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./dist/app.css">
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h2>シェアリング会</h2>
+                    <p>
+                        デベロッパーのため、エクストリームソフトウェア開発史を紹介していきたいと思います。
+                    </p>
+                </section>
+                <section>
+                    <section>
+                        <h2 style="text-align: left;">サムソン　シャム</h2>
+                        <h2 style="text-align: left;">Samson Sham</h2>
+                        <h5 style="text-align: right;">dev-03 配信高度化チーム</h5>
+                    </section>
+                    <section data-background-iframe="./earth.html" data-background-interactive data-state="mapShow">
+                        <h2 class="fragment fade-in-then-out" style="text-align: right;" action="zoomOut">日本</h2>
+                        <h2 class="fragment fade-in-then-out" style="text-align: left;" action="translate">香港</h2>
+                        <p class="fragment" action="zoomIn"></p>
+                    </section>
+                </section>
+                <section>
+                    <h3 style="text-align: left;">経歴</h3>
+                    <ul>
+                        <li class="fragment fade-left">モバイルアプリ開発</li>
+                        <li class="fragment fade-left">データベースサーバー実装</li>
+                        <li class="fragment fade-left">Javascriptアプリ開発</li>
+                        <li class="fragment fade-left">SDK開発</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3 style="text-align: left;">目的</h3>
+                    <ul>
+                        <li>IT業界・ソフトウェア開発の裏側</li>
+                        <li>コンピューターの理解を深まる</li>
+                        <li>皆の興味を沸かせる</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3 style="text-align: left;">Webの始まり</h3>
+                    <p style="text-align: left;">
+                        昔。。。昔。。。。
+                    </p>
+                    <img src="./assets/pyoko09_keirounohi.png" style="transform: translate(50%, 0);" />
+                </section>
+                <section>
+                    <p style="text-align: left;">
+                        インターネットがあった
+                    </p>
+                    <p style="text-align: left;">
+                        Telnetでコミュニケーション取れるが
+                    </p>
+                    <p style="text-align: left;">
+                        使える人が少ない。。。
+                    </p>
+                </section>
+                <section>
+                    <p style="text-align: left;">
+                        コミュニケーションはこうだった。。。
+                    </p>
+                    <pre><code data-trim>
+                        3c 3f 78 6d 6c 20 76 65 72 73 69 6f 6e 3d 22 31
+                        2e 30 22 20 65 6e 63 6f 64 69 6e 67 3d 22 55 54
+                        46 2d 38 22 20 73 74 61 6e 64 61 6c 6f 6e 65 3d
+                        22 6e 6f 22 3f 3e 0a 3c 70 6c 69 73 74 20 76 65
+                    </code></pre>
+                </section>
+                <section>
+                    <!-- HTTP -->
+                    <h2 class="fragment" data-fragment-index="1"><span class="fragment highlight-blue" data-fragment-index="2">H</span>yper<span class="fragment highlight-blue" data-fragment-index="2">T</span>ext <span class="fragment highlight-blue" data-fragment-index="2">T</span>ransfer <span class="fragment highlight-blue" data-fragment-index="2">P</span>rotocol</h2>
+                    <!-- HTML -->
+                    <h2 class="fragment" data-fragment-index="3"><span class="fragment highlight-green" data-fragment-index="4">H</span>yper<span class="fragment highlight-green" data-fragment-index="4">T</span>ext <span class="fragment highlight-green" data-fragment-index="4">M</span>arkup <span class="fragment highlight-green" data-fragment-index="4">L</span>anguage</h2>
+                </section>
+                <section data-auto-animate>
+                    <p data-id="dialogue" style="text-align: left;">
+                        もっと分かりやすくにしました！
+                    </p>
+                    <pre data-id="code"><code data-trim>
+                        HTTP/1.1 301 Moved Permanently
+                        Location: http://www.google.com/
+                        Content-Type: text/html; charset=UTF-8
+                        Date: Mon, 22 Jun 2020 00:04:27 GMT
+                        Expires: Tue, 21 Jul 2020 00:04:27 GMT
+                        Cache-Control: public, max-age=2592000
+                        Server: gws
+                        Content-Length: 219
+
+                        &lt;HTML&gt;&lt;HEAD&gt;&lt;meta http-equiv="content-type" content="text/html;charset=utf-8"&gt;
+                        &lt;TITLE&gt;301 Moved&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;
+                        &lt;H1&gt;301 Moved&lt;/H1&gt;
+                        The document has moved
+                        &lt;A HREF="http://www.google.com/"&gt;here&lt;/A&gt;.
+                        &lt;/BODY&gt;&lt;/HTML&gt;
+                    </code></pre>
+                </section>
+                <section data-auto-animate>
+                    <pre data-id="code"><code data-trim>
+                        HTTP/1.1 301 Moved Permanently
+                        Location: http://www.google.com/
+                        Content-Type: text/html; charset=UTF-8
+                        Date: Mon, 22 Jun 2020 00:04:27 GMT
+                        Expires: Tue, 21 Jul 2020 00:04:27 GMT
+                        Cache-Control: public, max-age=2592000
+                        Server: gws
+                        Content-Length: 219
+
+                        &lt;HTML&gt;&lt;HEAD&gt;&lt;meta http-equiv="content-type" content="text/html;charset=utf-8"&gt;
+                        &lt;TITLE&gt;301 Moved&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;
+                        &lt;H1&gt;301 Moved&lt;/H1&gt;
+                        The document has moved
+                        &lt;A HREF="http://www.google.com/"&gt;here&lt;/A&gt;.
+                        &lt;/BODY&gt;&lt;/HTML&gt;
+                    </code></pre>
+                    <p data-id="dialogue" style="text-align: left;">
+                        でも、文字だらけで読みづらい。。。
+                    </p>
+                </section>
+                <section>
+                    <p>ブラウザーが生まれました!</p>
+                    <img class="r-stretch" src="./assets/netscape.png" />
+                </section>
+                <section>
+                    <img src="./assets/mcdonalds.png" />
+                    <p style="font-size: 17px;">source: https://www.crazyegg.com/blog/90s-websites/</p>
+                </section>
+                <section>
+                    <p>でも、なんか足りない。。。</p>
+                    <img class="r-stretch" src="./assets/netscape.png" />
+                </section>
+                <section data-background="https://media.giphy.com/media/TdfyKrN7HGTIY/giphy.gif">
+                    <h1 style="color: white;">Javascriptが誕生しました！</h1>
+                </section>
+                <section>
+                    <p style="text-align: left;">開発者視点</p>
+                    <h4 class="fragment fade-in-then-out">Javascriptを考えた人が天才すぎるんだ</h4>
+                    <h3 class="fragment">Javascriptはインタプリタ言語だ</h3>
+                </section>
+                <section>
+                    <p>従来のソフトウェア開発はコンパイラ</p>
+                    <img class="r-stretch" src="./assets/software.png" />
+                </section>
+                <section>
+                    <p>JavaScriptの場合はインタプリタ</p>
+                    <img class="r-stretch" src="./assets/web.png" />
+                </section>
+                <!-- Example of compiler vs interpreter with boutique analogy -->
+                <section>
+                    <section>
+                        <p>訳が分らん。。。</p>
+                    </section>
+                    <section>
+                        <p>自分がファッションデザイナーを想像して</p>
+                        <img class="r-stretch" src="./assets/job_fashion_designer.png" />
+                    </section>
+                    <section>
+                        <p>色んな服を作って着させたい</p>
+                        <div class="r-hstack">
+                            <img class="r-stretch" src="./assets/figure_fashion_color_purple.png" />
+                            <img class="r-stretch" src="./assets/figure_fashion_hakui.png" />
+                            <img class="r-stretch" src="./assets/figure_fashion_color_blue.png" />
+                            <img class="r-stretch" src="./assets/figure_fashion_suit.png" />
+                            <img class="r-stretch" src="./assets/figure_fashion_color_green.png" />
+                            <img class="r-stretch" src="./assets/figure_fashion_sagyougi.png" />
+                        </div>
+                    </section>
+                    <section>
+                        <p>でも、お客さんのスペックが分らないな。。</p>
+                        <div class="r-hstack">
+                            <img class="r-stretch" src="./assets/fashion_happi1_red.png" />
+                            <img class="r-stretch" src="./assets/fashion_happi5_skyblue.png" />
+                            <img class="r-stretch" src="./assets/fashion_happi2_orange.png" />
+                        </div>
+                        <p>とりあえず、各サイズ、パターンを作りましょう</p>
+                    </section>
+                    <section>
+                        <p>お客さんに選んで頂こう</p>
+                        <div class="r-hstack">
+                            <img class="r-stretch" src="./assets/building_fashion.png" />
+                            <img class="r-stretch" src="./assets/building_kutsuya.png" />
+                        </div>
+                        <p>ただ試着はできません。。。</p>
+                    </section>
+                    <section>
+                        <p>これはコンパイラパターンです</p>
+                        <img class="r-stretch" src="./assets/software.png" />
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <p>インタプリタでは？</p>
+                    </section>
+                    <section>
+                        <p>設計図を自分に合わせて作る</p>
+                        <div class="r-hstack">
+                            <img src="./assets/kjhou_board.png" />
+                            <div class="r-vstack">
+                                <img style="width: 200px;" src="./assets/itoguruma_gandhi.png" />
+                                <img style="width: 200px;" src="./assets/itoguruma_woman.png" />
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <p>これはインタプリタパターンです</p>
+                        <img class="r-stretch" src="./assets/web.png" />
+                    </section>
+                </section>
+                <section>
+                    <p style="text-align: left;">ソフトウェアスタック</p>
+                    <img class="r-stretch" src="./assets/General.png" />
+                </section>
+                <section>
+                    <p style="text-align: left;">JAVAスタック</p>
+                    <img class="r-stretch" src="./assets/java.png" />
+                </section>
+                <section>
+                    <p style="text-align: left;">ウェブページスタック</p>
+                    <img class="r-stretch" src="./assets/browser.png" />
+                </section>
+                <section>
+                    <h4>開発者のデリバリが一転</h4>
+                </section>
+                <section>
+                    <h2 style="text-align: left;">まとめ</h2>
+                    <ul>
+                        <li class="fragment fade-left">JavaScriptはインタプリタ言語</li>
+                        <li class="fragment fade-left">コンパイラパターンはバイナリファイル</li>
+                        <li class="fragment fade-left">インタプリタパターンはソースコード</li>
+                        <li class="fragment fade-left">JavaScriptは実行環境が必要</li>
+                    </ul>
+                </section>
+                <section style="text-align: left;">
+                    <h1>THE END</h1>
+                </section>
+
+            </div>
+
+        </div>
+        <script src="dist/app.bundle.js"></script>
+    </body>
+</html>
